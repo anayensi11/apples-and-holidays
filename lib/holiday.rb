@@ -62,7 +62,13 @@ def all_holidays_with_bbq(holiday_hash)
 
 end
 
-
+def "#second_supply_for_fourth_of_july" do
+    it "returns the string 'BBQ' without hardcoding it" do
+      expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("BBQ")
+      holiday_supplies[:summer][:fourth_of_july][1] = "Watermelon"
+      expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("Watermelon")
+    end
+  end
 
 
 
